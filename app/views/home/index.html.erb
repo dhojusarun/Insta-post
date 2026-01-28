@@ -1,0 +1,8 @@
+<h1 class="text-blue-400">Welcome to Instapost 📸</h1>
+<% if current_user %>
+  <p>You are logged in as <strong><%= current_user.email %></strong></p>
+  <%= button_to "Logout", logout_path, method: :delete %>
+<% else %>
+  <%= link_to "Login", login_path %> |
+  <%= link_to "Sign up", signup_path %>
+<% end %>
